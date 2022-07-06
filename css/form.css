@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.body:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/IQGeo_and_Smart_city_and_IoT_strategies_for_utilities.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(3px);
+}
+.body .title-nav{
+    position: absolute;
+    padding: 60px 0px 0px 100px ;
+    width: 20%;
+    color: white;
+}
+.body .title-nav h2{
+    display: inline;
+    font-size: 50px;   
+}
+.title-nav p{
+    margin-top: 30px;
+    font-size: 13px;
+}
+.nav-btn{
+    margin: 30px 30px 0px 0px;
+    text-align: right;
+}
+.nav-btn button{
+    cursor: pointer;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 28px;
+    width: 11%;
+    margin:10px auto;
+    background:#ee6243 ;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+    transition: 0.3s ease;
+}
+.form-content{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 50%;
+    margin: auto;
+}
+.container{
+    width: 330px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.582);
+    box-shadow: 1px 2px 20px #054a52;
+    border-radius: 5px;
+    text-align: center;
+    padding:40px 35px 0px;
+}
+.container h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.container .sign-form{
+    width: 100%;
+   overflow: hidden;
+}
+.sign-form .form{
+    display: flex;
+    width: 400%;
+}
+.sign-form form .page{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+} 
+.sign-form form .page .title{
+    font-size: 25px;
+    text-align: left;
+    font-size: 400;
+}
+.login-form p{
+    color: gray;
+    font-size: 13px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.login-form p span{
+    color: #ee6243;
+}
+.page .field{
+    position: relative;
+    display: flex;
+    height: 45px;
+    width: 330px;
+    margin: 45px 0px;
+}
+.page .next-btn{
+    margin: 20px 0px 10px;
+}
+.page .btns{
+    margin: 20px 0px 10px;
+}
+.form-content .text{
+    margin: 0px 0px 40px;
+    text-align: left;
+}
+.form-content .text a:visited , .login-form p a:visited{
+    color: #11656e;
+}
+.form-content .text a:hover , .login-form p a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-weight: bolder;
+}
+.page .field  #label{
+    position: absolute;
+    top: -30px;
+    font-weight: 400;
+    color: #ee6243;
+}
+.field input[type=text],input[type=email],input[type=password],input[type=date]{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 17px;
+    color: rgb(68, 67, 67);
+    padding-left: 15px ;
+}
+.field input::placeholder{
+    font-size: 14px;
+    color: gray;
+}
+.field select{
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left:10px;
+    font-size: 17px;
+    font-weight: 300;
+}
+.field input:hover , .field select:hover{
+    border:2px solid #ee6243 ;
+}
+.field button , input[type=submit]{
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: #ee6243;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.field button:hover , input[type=submit]:hover , .nav-btn button:hover{
+    background: #075e68;
+    border: none;
+}
+.page .btns button.prev{
+    margin-right: 3px;
+    font-size: 15px;
+}
+.page .btns button.next{
+    margin-left: 3px;
+    font-size: 15px;
+}
+.previous{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.previous:visited{
+    color: white;
+}
+.progress-bar{
+    display: flex;
+    margin: 40px 0px;
+}
+.progress-bar .step{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.progress-bar .step p{
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+.progress-bar .step p.active{
+    color: #ee6243;
+}
+.progress-bar .step .bullet{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: inline-block;
+    transition: 0.2s;
+}
+.progress-bar .step .bullet.active{
+    border-color:#ee6243 ;
+    background: #ee6243;
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+    display: none;
+}
+.progress-bar .step .bullet:before,.progress-bar .step .bullet:after{
+    position: absolute;
+    content: "";
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: black;
+}
+.progress-bar .step .bullet.active:after{
+    background: #ee6243;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-bar .step span{
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+}
+.progress-bar .step .bullet.active span{
+    display: none;
+}
+.progress-bar .step .check{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.progress-bar .step .check.active{
+    display: block;
+    color: white;
+}

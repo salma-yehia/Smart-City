@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+#soil {
+    width: 100%;
+    margin: 40px auto;
+    margin-top: 80px;
+}
+
+#soil .card {
+    margin-top: -20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#soil .card .circle-img img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border: 5px solid #0f9ead;
+    cursor: default;
+}
+
+.card .text-soil {
+    text-align: center;
+    color: #0f9ead;
+    letter-spacing: 1px;
+}
+
+.card .text-soil h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 40px;
+    color: #0f9ead;
+    padding-bottom: 30px;
+}
+
+.card .text-soil h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 35px;
+    color: #0f9ead;
+}

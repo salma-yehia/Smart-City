@@ -1,0 +1,417 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+
+/* Css Variable */
+
+ :root {
+    --bodycolor: #f7edea;
+    --maincolor: #ee6243;
+    --hovercolor: #054a52;
+    --hovercolor2: #e49381;
+    --fontcolor: #fff;
+    --fontcolor2: #000;
+}
+
+.dark-mode {
+    --bodycolor: #363333;
+    --maincolor: #282828;
+    --hovercolor: #404040;
+    --fontcolor: #fff;
+    --fontcolor2: #fff;
+    --hovercolor2: #b3b3b3;
+    --border: #fff;
+}
+
+body {
+    background: var(--bodycolor);
+}
+
+.warpper .header {
+    background-color: var(--maincolor);
+    z-index: 1;
+    position: fixed;
+    width: calc(100% - 0%);
+    height: 70px;
+    display: flex;
+}
+
+.warpper .header .header-menu {
+    width: calc(100% - 0%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header .header-menu .title {
+    color: var(--fontcolor);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.header .header-menu .sidebar-btn {
+    color: var(--fontcolor);
+    position: absolute;
+    margin-left: 240px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+.header .header-menu .sidebar-btn:hover {
+    color: var(--hovercolor);
+}
+
+.warpper .header .header-menu ul {
+    display: flex;
+}
+
+.warpper .header .header-menu ul li a {
+    background: #fff;
+    color: var(--maincolor);
+    display: block;
+    margin: 0 10px;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    line-height: 35px;
+    text-align: center;
+    transition: 0.3s;
+    transition-property: background, color;
+}
+
+.warpper .header .header-menu ul li a:hover,
+.active-hover {
+    background: var(--hovercolor2);
+    color: var(--fontcolor);
+}
+
+.warpper .sidebar {
+    z-index: 1;
+    background: var(--maincolor);
+    position: fixed;
+    top: 70px;
+    width: 250px;
+    height: calc(100% - 0%);
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+}
+
+
+/* scrollbar*/
+
+
+/* width */
+
+ ::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rosybrown;
+}
+
+.warpper .sidebar .sidebar-menu {
+    overflow: hidden;
+}
+
+.warpper .sidebar .sidebar-menu .item {
+    width: 250px;
+    overflow: hidden;
+}
+
+.warpper .sidebar .sidebar-menu .item .menu-btn {
+    display: block;
+    color: var(--fontcolor);
+    position: relative;
+    padding: 20px;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+.warpper .sidebar .sidebar-menu .item .menu-btn:hover {
+    background: var(--hovercolor2);
+}
+
+.warpper .sidebar .sidebar-menu .item .menu-btn i {
+    font-size: 23px;
+    margin-right: 32px;
+}
+
+.warpper .sidebar .sidebar-menu .item .menu-btn .drop-down {
+    float: right;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.warpper .sidebar .sidebar-menu .item .sub-menu {
+    background: var(--hovercolor2);
+    overflow: hidden;
+    transition: 0.3s;
+    max-height: 0;
+    transition-property: background, max-hight;
+}
+
+.warpper .sidebar .sidebar-menu .item .sub-menu a {
+    background: var(--hovercolor);
+    display: block;
+    position: relative;
+    color: var(--fontcolor);
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.warpper .sidebar .sidebar-menu .item .sub-menu a:hover {
+    background: var(--hovercolor2);
+}
+
+.warpper .sidebar .sidebar-menu .item .sub-menu i {
+    padding-right: 27px;
+    font-size: 18px;
+}
+
+.warpper .sidebar .sidebar-menu .item:target .sub-menu {
+    max-height: 500px;
+}
+
+.warpper.collapse .sidebar {
+    width: 60px;
+}
+
+.wrapper .collapse .sidebar .sidebar-menu .item .menu-btn {
+    font-size: 25px;
+}
+
+.wrapper .collapse .sidebar .sidebar-menu .item .sub-menu i {
+    font-size: 30px;
+    padding-left: 3px;
+}
+
+.warpper .address-section {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    padding: 50px;
+    color: #000;
+    transition: 0.3s;
+}
+
+.warpper iframe {
+    width: 100%;
+    margin: 10px auto;
+    height: 65vh;
+    border-radius: 20px;
+}
+
+.warpper.collapse .address-section {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+}
+
+ul.breadcrumb {
+    margin-top: 30px;
+    padding: 10px 5px 16px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    color: var(--fontcolor2);
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--fontcolor2);
+    content: ">\00a0";
+}
+
+ul.breadcrumb .include {
+    color: gray;
+}
+
+.address-section h1 {
+    color: var(--fontcolor2);
+    font-size: 28px;
+}
+
+.address-section hr {
+    width: 100%;
+    opacity: 0.25;
+    margin: 15px 0px;
+}
+
+.address-container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.address-container form {
+    background: #e0b8af;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
+    width: 40%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.address-container label i {
+    color: white;
+    margin-left: 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.address-container form input {
+    background: #e0b8af;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.address-container .add {
+    background: #e0b8af;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 750px;
+    margin-top: -52px;
+}
+
+.address-container form input::placeholder {
+    font-size: 20px;
+}
+
+.address-container table {
+    border-collapse: collapse;
+    color: var(--fontcolor2);
+    text-align: center;
+    width: 90%;
+    margin: 40px auto;
+    font-size: 15px;
+}
+
+table th {
+    color: #0a7783;
+}
+
+table th,
+td {
+    border: 1px solid #ee6243;
+    padding: 10px 25px;
+}
+
+.overlay,
+.edit-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.747);
+    display: none;
+}
+
+.openlay {
+    display: block;
+}
+
+.overlay .add-new-contact,
+.edit-form .edit-contact {
+    background-color: #e0b8af;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+}
+
+.closed,
+.edit-contact .closed-edit {
+    position: absolute;
+    top: 2%;
+    left: 93%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#user-icon {
+    font-size: 40px;
+    margin: 30px 0 15px;
+}
+
+.add-new-contact span,
+.edit-form span {
+    font-size: 25px;
+}
+
+.add-new-contact form input,
+.edit-contact form input {
+    display: block;
+    outline: none;
+    border: none;
+    padding: 15px 20px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 30px;
+}
+
+.add-new-contact button,
+.edit-contact button {
+    background-color: transparent;
+    font-size: 16px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.add-new-contact button:hover,
+.edit-contact button:hover {
+    transform: scale(1.2);
+}

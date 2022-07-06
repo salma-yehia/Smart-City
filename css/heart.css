@@ -1,0 +1,64 @@
+#heart {
+  font-family: 'Fredoka', sans-serif;
+  transform: translateY(40%);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  width: 100%;
+  margin: auto;
+}
+#heart .heart-content {
+  text-align: center;
+}
+.heart-content h5 , .heart-content h4 , .heart-content span{
+  font-family: 'Fredoka', sans-serif;
+}
+#heart .heart-content h5 {
+  font-size: 25px;
+}
+#heart .heart-content h4 {
+  margin-bottom: 15px;
+}
+#heart .heart-content span {
+  font-size: 18px;
+}
+.heart {
+  position: relative;
+  left: 28%;
+  height: 80px;
+  width: 80px;
+  background: #f20044;
+  transform: rotate(-45deg);
+  box-shadow: -10px 10px 90px #f20044;
+  animation: heart 0.6s linear infinite;
+}
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+.heart::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  height: 80px;
+  width: 80px;
+  background: #f20044;
+  border-radius: 50px;
+}
+.heart::after {
+  content: "";
+  position: absolute;
+  right: -50%;
+  height: 80px;
+  width: 80px;
+  background: #f20044;
+  border-radius: 50px;
+}
